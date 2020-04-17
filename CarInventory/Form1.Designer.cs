@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // yearInput
@@ -81,7 +82,7 @@
             // outputLabel
             // 
             this.outputLabel.BackColor = System.Drawing.Color.White;
-            this.outputLabel.Location = new System.Drawing.Point(37, 192);
+            this.outputLabel.Location = new System.Drawing.Point(37, 179);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(300, 138);
             this.outputLabel.TabIndex = 5;
@@ -123,11 +124,22 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Mileage";
             // 
+            // exitButton
+            // 
+            this.exitButton.Location = new System.Drawing.Point(146, 320);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(95, 34);
+            this.exitButton.TabIndex = 10;
+            this.exitButton.Text = "Save";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 366);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -157,6 +169,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button exitButton;
     }
 }
 
