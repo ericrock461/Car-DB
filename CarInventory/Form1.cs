@@ -32,7 +32,7 @@ namespace CarInventory
             string newYear, newMake, newColour, newMileage;
 
             //Open the XML file and place it in reader 
-            XmlReader reader = XmlReader.Create("Resources/studentInfo.xml");
+            XmlReader reader = XmlReader.Create("Resources/XMLFile1.xml");
 
             while (reader.Read())
             {
@@ -40,23 +40,21 @@ namespace CarInventory
                 {
                     newYear = reader.ReadString();
 
-                    reader.ReadToNextSibling("Make");
+                    reader.ReadToNextSibling("make");
                     newMake = reader.ReadString();
 
-                    reader.ReadToNextSibling("Colour");
+                    reader.ReadToNextSibling("colour");
                     newColour = reader.ReadString();
 
-                    reader.ReadToNextSibling("Mileage");
+                    reader.ReadToNextSibling("mileage");
                     newMileage = reader.ReadString();
                     
 
                     Car c = new Car(newYear, newMake, newColour, newMileage);
-                    Inventory.Add(c);
-
-                    reader.Close();
+                    Inventory.Add(c);                   
                 }
-
             }
+            reader.Close();
         }
 
         private void addButton_Click(object sender, EventArgs e)
